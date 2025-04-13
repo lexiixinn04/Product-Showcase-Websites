@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>  
+
+<style>
+    body, h1, h2, h3, h4, h5, h6  {
+      font-family: "Lucida Console", Monaco, monospace;
+    }
+    </style>
+    
+    <!-- Top header -->
+  <header class="w3-container w3-xlarge w3-card-4" style="display: flex; justify-content: space-between; align-items: center;">
+    <p class="w3-xlarge">AUTO CONCEPT</p>
+    <form onsubmit="return handleSearch(event)" style="display: flex; align-items: center; gap: 8px;">
+      <input id="searchInput" type="text" placeholder="Search..." class="w3-input w3-border" 
+             style="width: 160px; height: 32px; font-size: 14px; padding: 4px 8px; border-radius: 4px;">
+      <button type="submit" class="w3-button w3-black" style="height: 32px; padding: 0 12px;">
+        <i class="fa fa-search"></i>
+      </button>
+    </form>
+  </header>
+
+<body class="w3-content" style="max-width:1200px">
+    <!-- Top menu icon for opening the hidden sidebar -->
+<span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;left:0;" onclick="openNav()">
+    <i class="fa fa-bars"></i>
+  </span>
+  
+  <!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" >
+    <!-- Hidden Sidebar (reveals when clicked on menu icon) -->
+  <nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;left:0;z-index:2" id="mySidebar">
+    <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topleft" style="padding:0 12px;">
+      <i class="fa fa-remove"></i>
+    </a>
+
+    <div class="w3-bar-block w3-center">
+    <img src="image/Auto-company-logos-creative-vector-09.jpg" class="w3-circle" style="width:70%" >
+    <a href="index.html" class="w3-bar-item w3-button w3-large w3-text-grey w3-hover-black" onclick="closeNav()">HOME</a>
+    <a href="shoop.html" class="w3-bar-item w3-button w3-large w3-text-grey w3-hover-black" onclick="closeNav()">SHOP</a>
+    <a href="Toyota.html" class="w3-bar-item w3-button w3-large w3-text-grey w3-hover-black" onclick="closeNav()">TOYOTA</a>
+    <a href="Honda.html" class="w3-bar-item w3-button w3-large w3-text-grey w3-hover-black" onclick="closeNav()">HONDA</a>
+    <a href="Ford.html" class="w3-bar-item w3-button w3-large w3-text-grey w3-hover-black" onclick="closeNav()">FORD</a>
+    <a href="Sport.html" class="w3-bar-item w3-button w3-large w3-text-grey w3-hover-black" onclick="closeNav()">SPORT CAR</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-large w3-text-grey w3-hover-black" onclick="closeNav()">CONTACT</a>
+    </div>
+  </nav>
+  </nav>
+   <!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <div class="w3-container w3-padding-32 w3-center">  
+    <h3>BUGATTI-SPORT-CAR</h3><br>
+    <img src="image/bugatti-sport-car-77.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
+    <div class="w3-padding-32">
+      <h4><b>Overview:</b></h4>
+      <h6><i>Bugatti is a French luxury automobile brand known for producing some of the fastest, most exclusive, and most expensive sports cars in the world. The brand blends advanced engineering, elite craftsmanship, and record-breaking performance to create machines that are both technical marvels and works of art.</p>
+    </div>
+  </div>
+
+  <div class="w3-container w3-padding-32 w3-center">  
+    <h3>TOYOTA SUPRA</h3><br>
+    <img src="image/ToyotaSupra.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
+    <div class="w3-padding-32">
+      <h4><b>Overview:</b></h4>
+      <h6><i>Lamborghini is a legendary Italian supercar manufacturer known for its bold design, aggressive power, and roaring V10 & V12 engines. Every Lamborghini car is a head-turner, combining futuristic aesthetics with race-ready performance.</p>
+    </div>
+  </div>
+
+
+  <script>
+    // Open and close sidebar
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "20%";
+      document.getElementById("mySidebar").style.display = "block";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+    </script>
+
+<script>
+    function handleSearch(event) {
+      event.preventDefault(); // prevent form from reloading the page
+      const query = document.getElementById("searchInput").value.toLowerCase().trim();
+  
+      if (query.includes("shop")) {
+      window.location.href = "shoop.html";
+    } else if (query.includes("sport")) {
+      window.location.href = "Sport.html";
+    } else if (query.includes("home")) {
+      window.location.href = "index.html";
+    } else if (query.includes("contact")) {
+      window.location.href = "contact.html";
+    } else if (query.includes("ford")) {
+      window.location.href = "Ford.html";
+    } else if (query.includes("honda")) {
+      window.location.href = "Honda.html";
+    } else if (query.includes("toyota")) {
+      window.location.href = "Toyota.html";
+    } else {
+      alert("Page not found. Try: shop, sport, home, or contact.");
+    }
+    return false;
+    }
+  </script>
+</div>
+</body>
+</html>

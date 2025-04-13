@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOP</title>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=shopping_cart" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="w3-content" style="max-width:1200px">
+
+    <style>
+        body, h1, h2, h3, h4, h5, h6  {
+          font-family: "Lucida Console", Monaco, monospace;
+        }
+        </style>    
+
+ <!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" >
+
+    <!-- Hidden Sidebar (reveals when clicked on menu icon) -->
+  <nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;left:0;z-index:2" id="mySidebar">
+    <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topleft" style="padding:0 12px;">
+      <i class="fa fa-remove"></i>
+    </a>
+  
+    <div class="w3-bar-block w3-center">
+        <img src="image/Auto-company-logos-creative-vector-09.jpg" class="w3-circle" style="width:70%" >
+        <a href="index.html" class="w3-bar-item w3-button w3-large w3-text-grey w3-hover-black" onclick="closeNav()">HOME</a>
+        <a href="shoop.html" class="w3-bar-item w3-button w3-large w3-text-grey w3-hover-black" onclick="closeNav()">SHOP</a>
+        <a href="Toyota.html" class="w3-bar-item w3-button w3-large w3-text-grey w3-hover-black" onclick="closeNav()">TOYOTA</a>
+        <a href="Honda.html" class="w3-bar-item w3-button w3-large w3-text-grey w3-hover-black" onclick="closeNav()">HONDA</a>
+        <a href="Ford.html" class="w3-bar-item w3-button w3-large w3-text-grey w3-hover-black" onclick="closeNav()">FORD</a>
+        <a href="Sport.html" class="w3-bar-item w3-button w3-large w3-text-grey w3-hover-black" onclick="closeNav()">SPORT CAR</a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-large w3-text-grey w3-hover-black" onclick="closeNav()">CONTACT</a>
+    </div>
+  </nav>
+  </nav>
+  
+  <!-- Top menu icon for opening the hidden sidebar -->
+<span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;left:0;" onclick="openNav()">
+    <i class="fa fa-bars"></i>
+  </span>
+
+  <!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+  
+    <!-- Push down content on small screens -->
+    <div class="w3-hide-large" style="margin-top:83px"></div>
+
+    <header class="w3-container w3-xlarge w3-card-4" 
+        style="display: flex; justify-content: space-between; align-items: center;">
+  
+  <div style="text-align: left; flex: 1;">
+    <p >AUTO CONCEPT</p>
+  </div>
+
+  <form onsubmit="return handleSearch(event)" 
+        style="display: flex; align-items: center; gap: 8px;">
+    <input id="searchInput" type="text" placeholder="Search..." 
+           class="w3-input w3-border" 
+           style="width: 160px; height: 32px; font-size: 14px; padding: 4px 8px; border-radius: 4px;">
+    <button type="submit" class="w3-button w3-black" 
+            style="height: 32px; padding: 0 12px;">
+      <i class="fa fa-search"></i>
+    </button>
+  </form>
+</header>
+
+  <!-- Product grid -->
+  <div class="w3-row w3-grayscale">
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="image/TOYOTA_AVALON_China_(73).jpg" style="width:100%">
+        <p>TOYOTA-AVALON<br><b>$1560.99</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="image/Toyota_Century_3rd_generation_2017_Tokyo_Motor_Show_front_1_(cropped).jpg" style="width:100%">
+        <p>TOYOTA-CENTURY-3RD<br><b>$1999.99</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+          <img src="image/ToyotaSupra.jpg" style="width:100%">
+          <div class="w3-display-middle w3-display-hover">
+        </div>
+        <p>Toyota-supra<br><b>$2670.99</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="image/bugatti-sport-car-77.jpg" style="width:100%">
+        <p>Sport Car<br><b>$2500.50</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="image/Ford Ranger Wildtrak 001_eqfkqu.webp" style="width:100%">
+        <p>Ford-Ranger<br><b>$2000.50</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="image/2022_Ford_Everest_Titanium+_2.0L_Bi-Turbo_4x4.jpg" style="width:100%">
+          <div class="w3-display-middle w3-display-hover">
+          </div>
+        </div>
+        <p>Ford-Everest<br><b>$1499.99</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="image/Hondajazz.jpg" style="width:100%">
+        <p>Honda Jazz<br><b>$1450.99</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="image/Hondacivic.jpg" style="width:100%">
+        <p>Honda Civic<br><b>$900.99</b></p>
+      </div>
+    </div>
+</div>
+ 
+<div class="w3-black w3-center w3-padding-24">BUY NOW! <span class="material-symbols-outlined">shopping_cart</span></a></div>
+
+
+<script>
+    // Open and close sidebar
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "20%";
+      document.getElementById("mySidebar").style.display = "block";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+    </script>
+
+<script>
+    function handleSearch(event) {
+      event.preventDefault(); // prevent form from reloading the page
+      const query = document.getElementById("searchInput").value.toLowerCase().trim();
+  
+      if (query.includes("shop")) {
+      window.location.href = "shoop.html";
+    } else if (query.includes("sport")) {
+      window.location.href = "Sport.html";
+    } else if (query.includes("home")) {
+      window.location.href = "index.html";
+    } else if (query.includes("contact")) {
+      window.location.href = "contact.html";
+    } else if (query.includes("ford")) {
+      window.location.href = "Ford.html";
+    } else if (query.includes("honda")) {
+      window.location.href = "Honda.html";
+    } else if (query.includes("toyota")) {
+      window.location.href = "Toyota.html";
+    } else {
+      alert("Page not found. Try: shop, sport, home, or contact.");
+    }
+    return false;
+    }
+  </script>
+</body>
+</html>
